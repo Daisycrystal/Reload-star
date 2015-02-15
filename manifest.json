@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+
+  "name": "Reload all tabs",
+  "description": "This extension reloads all the tabs open in chrome browser",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "RefreshAll.png",
+	"default_title": "Reload all tabs"
+  },
+  "background": {
+      "scripts": [ "reload.js"],
+	  "persistent": false
+        },
+  "permissions": [
+    "tabs",
+	"http://*/*", 
+	"https://*/*"
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}
